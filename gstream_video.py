@@ -1,5 +1,4 @@
 import cv2 as cv
-import numpy as np 
 
 pipeline = 'udpsrc port=5600 caps="application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264" ! rtph264depay ! avdec_h264 ! videoconvert ! appsink sync=false'
 cap = cv.VideoCapture(pipeline, cv.CAP_GSTREAMER)
